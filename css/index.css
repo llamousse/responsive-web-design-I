@@ -1,3 +1,399 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+  
+.static-navbar {
+	/* position: fixed; */
+	top: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+@media (max-width: 800px) {
+	.static-navbar {
+		/* display: flex; */
+	}
+}
+
+nav {
+	width: 880px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    nav {
+		width: 100%;
+		height: auto;
+		/* flex-direction: column; */
+		/* align-items: center; */
+		/* justify-content: center; */
+
+		/* align-items: center;
+		flex-direction: column-reverse; */
+
+		
+    }
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	margin-top: 35px;
+}
+
+nav a:hover {
+	color: rgb(176, 177, 178);
+}
+
+/* @media (max-width: 800px) {
+	nav a {
+		border-bottom: 1px solid gray;
+	}
+} */
+
+nav div {
+	right: 0;
+	display: flex;
+}
+
+@media (max-width: 800px) {
+	nav div {
+		order: -1;
+	}
+}
+
+.logo {
+	margin-top: -12px;
+	margin-left: 30px;
+}
+
+@media (max-width: 800px) {
+	.logo {
+
+	}
+}
+
+.website-wrapper {
+	width: 880px;
+	margin: 130px auto 0 auto;
+	z-index: 1;
+}
+
+@media (max-width: 800px) {
+	.website-wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.website-wrapper h1 {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	border-bottom: 1px solid black;
+	position: relative;
+	height: 490px;
+	display: flex;
+}
+
+@media (max-width: 800px) {
+	header {
+		align-items: center;
+		justify-content: center;
+		margin: 0 2%;
+	}
+}
+
+header div {
+	text-align: center;
+	margin: 70px 0 0 85px;
+}
+
+@media (max-width: 800px) {
+	header div {
+		margin: 0 auto;
+	}
+}
+
+header div h1 {
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+header div a {
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	padding: 4px 48px;
+}
+
+header img {
+	position: absolute;
+	right: 0;
+	margin-top: 25px;
+}
+
+@media (max-width: 800px) {
+	header img {
+		display: none;
+	}
+}
+
+.section-one {
+	display: flex;
+	margin-top: 39px;
+}
+
+.section-one div {
+	width: 430px;
+	height: 100px;
+}
+
+@media (max-width: 800px) {
+	.section-one {
+		margin-left: 3%;
+		margin-right: 3%;
+	}	
+}
+
+.section-one div p {
+	line-height: 1.16;
+}
+
+.section-one div:first-child {
+	margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+	.section-one div:first-child {
+		margin-right: 20px;
+	}
+}
+
+.middle-img {
+	margin-top: 38px;	
+}
+
+@media (max-width: 800px) {
+	.middle-img {
+		width: 100%;
+		margin-top: 6%;
+		padding: 15px;
+	}
+}
+
+.section-two {
+	border-bottom: 1px solid black;
+	margin-top: 36px;
+	padding-bottom: 47px;
+	display: flex;
+}
+
+@media (max-width: 800px) {
+	.section-two {
+		margin-left: 3%;
+		margin-right: 3%;
+		margin-top: 2%;
+	}	
+}
+
+.section-two div {
+	width: 280px;
+	margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+	.section-two div {
+		margin-right: 30px;
+	}	
+}
+
+.section-two div p {
+	line-height: 1.16;
+}
+
+address {
+	margin-top: 38px;
+}
+
+@media (max-width: 800px) {
+	address {
+		width: 100%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+}
+
+address div {
+	line-height: 1.16;
+}
+
+address div span {
+	display: flex;
+	margin: 17px 0 0 0;
+}
+
+footer {
+	width: 100%;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+footer p {
+	margin-top: 54px;
+	font-size: 14px;
+}
+
+/* SERVICES */
+
+.services-wrapper {
+	margin: 80px auto 0 auto;
+}
+
+.services-header-img {
+	display: flex;
+}
+
+.services-head {
+	padding-bottom: 40px;
+	border-bottom: 1px solid black;
+}
+
+.services-title {
+	font-size: 28px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.learn-more {
+	margin-top: 15px;
+	padding: 5px;
+	width: 38%;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.services-one {
+	background-color: #f2f2f2;
+	border: 1px solid black;
+	margin-top: 40px;
+	margin-right: 35px;
+	padding: 25px;
+	width: 48%;
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.services-two {
+	background-color: #f2f2f2;
+	border: 1px solid black;
+	margin-top: 40px;
+	padding: 25px;
+	width: 48%;
+	float: right;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sections-flex {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+	border-bottom: 2px solid black;
+}
+
+.about-sect {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 47%;
+	float: left;
+}
+
+.about-sect h2, .about-sect p {
+	margin-bottom: 25px;
+}
+
+.list-of-things {
+	margin-left: 20px;
+	list-style-type: square;
+	display: flex;
+	flex-direction: column;
+}
+
+.list-of-things li {
+	padding-bottom: 10px;
+}
+
+.services-info-img {
+	margin-top: 40px;
+	margin-left: 46px;
+}
+
+.services-footer {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
