@@ -85,10 +85,9 @@ nav {
 		/* align-items: center; */
 		/* justify-content: center; */
 
-		/* align-items: center;
-		flex-direction: column-reverse; */
-
-		
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;		
     }
 }
 
@@ -102,11 +101,11 @@ nav a:hover {
 	color: rgb(176, 177, 178);
 }
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
 	nav a {
-		border-bottom: 1px solid gray;
+		/* border-bottom: 1px solid gray; */
 	}
-} */
+}
 
 nav div {
 	right: 0;
@@ -115,7 +114,9 @@ nav div {
 
 @media (max-width: 800px) {
 	nav div {
-		order: -1;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
 	}
 }
 
